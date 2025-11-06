@@ -1,7 +1,17 @@
 /* BetaBLU Website - Professional Animations & Black Theme */
 .App {
   min-height: 100vh;
+  min-width: 100vw;
   background-color: #000;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Professional Animation Keyframes */

@@ -16,20 +16,24 @@ import {
 
 function App() {
   return (
-    <div className="App bg-black min-h-screen">
+    <div className="App fixed inset-0 bg-black w-screen h-screen overflow-x-hidden">
       <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cosmos" element={<CosmosPage />} />
-          <Route path="/nova" element={<NovaPage />} />
-          <Route path="/api" element={<APIPage />} />
-          <Route path="/research" element={<ResearchPage />} />
-          <Route path="/safety" element={<SafetyPage />} />
-          <Route path="/company" element={<CompanyPage />} />
-          <Route path="/login" element={<LoginPage />} />
-        </Routes>
-        <Footer />
+        <div className="flex flex-col min-h-screen max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
+          <Header />
+          <main className="flex-grow w-full">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/cosmos" element={<CosmosPage />} />
+              <Route path="/nova" element={<NovaPage />} />
+              <Route path="/api" element={<APIPage />} />
+              <Route path="/research" element={<ResearchPage />} />
+              <Route path="/safety" element={<SafetyPage />} />
+              <Route path="/company" element={<CompanyPage />} />
+              <Route path="/login" element={<LoginPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </BrowserRouter>
     </div>
   );

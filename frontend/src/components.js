@@ -16,7 +16,7 @@ export const Header = () => {
     <header className={`sticky top-0 z-50 transition-all duration-300 ${
       scrollY > 50 ? 'bg-black/95 backdrop-blur-sm border-b border-gray-800' : 'bg-black/80'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo with hover animation */}
           <Link to="/" className="flex items-center group">
@@ -191,7 +191,7 @@ const Products = () => {
       name: "Cosmos",
       description: "Advanced LLM chat agent that learns and adapts from every conversation",
       image: "https://images.pexels.com/photos/15940012/pexels-photo-15940012.jpeg",
-      status: "Available",
+      status: "Coming Soon",
       link: "/cosmos",
       features: ["Natural Language Processing", "Persistent Memory", "Adaptive Learning"]
     },
@@ -199,7 +199,7 @@ const Products = () => {
       name: "Deepblu",
       description: "Deep research agent that conducts comprehensive analysis on any topic",
       image: "https://images.unsplash.com/photo-1664854953181-b12e6dda8b7c",
-      status: "Available",
+      status: "Coming Soon",
       link: "/research",
       features: ["Deep Research", "Data Analysis", "Autonomous Investigation"]
     },
