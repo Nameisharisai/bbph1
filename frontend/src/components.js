@@ -14,18 +14,18 @@ export const Header = () => {
 
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${
-      scrollY > 50 ? 'bg-black/95 backdrop-blur-sm border-b border-gray-800' : 'bg-black/80'
+      scrollY > 50 ? 'bg-white shadow-md border-b border-gray-100' : 'bg-white/95'
     }`}>
       <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo with hover animation */}
           <Link to="/" className="flex items-center group">
             <div className="flex-shrink-0">
-              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                <div className="w-4 h-4 bg-black rounded-full transition-all duration-300 group-hover:animate-pulse"></div>
+              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                <div className="w-4 h-4 bg-white rounded-full transition-all duration-300 group-hover:animate-pulse"></div>
               </div>
             </div>
-            <span className="ml-3 text-xl font-bold text-white group-hover:text-gray-300 transition-colors duration-300">BetaBLU</span>
+            <span className="ml-3 text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">BetaBLU</span>
           </Link>
 
           {/* Desktop Navigation with hover effects */}
@@ -41,11 +41,11 @@ export const Header = () => {
               <Link 
                 key={item.name}
                 to={item.path} 
-                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-all duration-300 relative group"
+                className="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-300 relative group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {item.name}
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </Link>
             ))}
           </nav>
