@@ -1,11 +1,10 @@
-/* BetaBLU Website - Professional Animations & Light Theme */
+/* BetaBLU Website - Professional Animations & Black Theme */
 .App {
   min-height: 100vh;
   min-width: 100vw;
-  background-color: #ffffff;
+  background-color: #000;
   overflow-x: hidden;
   position: relative;
-  color: #333333;
 }
 
 #root {
