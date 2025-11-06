@@ -145,7 +145,7 @@ const Hero = () => {
             <p className={`text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed transform transition-all duration-1000 delay-300 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
-              BetaBLU builds autonomous AI agents that think, act, learn, and improve over time. 
+              Betablu builds autonomous AI agents that think, act, learn, and improve over time. 
               Unlike static models, our adaptive systems are persistent, self-improving, and truly intelligent.
             </p>
             <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 delay-500 ${
@@ -296,7 +296,7 @@ const Products = () => {
 const LatestNews = () => {
   const newsItems = [
     {
-      title: "BetaBLU introduces Adaptive AI Framework",
+      title: "Betablu introduces Adaptive AI Framework",
       description: "Our breakthrough framework enables AI agents to continuously learn and adapt to new environments without retraining.",
       image: "https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg",
       date: "June 2025",
@@ -682,7 +682,7 @@ curl -X POST https://api.betablu.ai/nova/analyze
         <div className="text-center mb-20">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 animate-fadeInUp">
             <span className="inline-block">API Platform</span>
-            <span className="block text-gray-400">Build with BetaBLU</span>
+            <span className="block text-gray-400">Build with Betablu</span>
           </h1>
           <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
             Integrate our adaptive AI agents into your applications. Our API platform provides 
@@ -1061,11 +1061,11 @@ export const CompanyPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-20">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 animate-fadeInUp">
-            <span className="inline-block">About BetaBLU</span>
+            <span className="inline-block">About Betablu</span>
             <span className="block text-gray-400">Our Mission</span>
           </h1>
           <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
-            BetaBLU is a next-generation AI research company building the world's most advanced 
+            Betablu is a next-generation AI research company building the world's most advanced 
             adaptive intelligence systems — autonomous AI agents that can think, act, learn, and improve over time.
           </p>
         </div>
@@ -1089,7 +1089,7 @@ export const CompanyPage = () => {
             <div className="relative group">
               <img 
                 src="https://images.unsplash.com/photo-1522252234503-e356532cafd5" 
-                alt="BetaBLU Team" 
+                alt="Betablu Team" 
                 className="w-full rounded-2xl transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
@@ -1166,7 +1166,7 @@ export const LoginPage = () => {
           <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform duration-300">
             <div className="w-8 h-8 bg-black rounded-full animate-pulse"></div>
           </div>
-          <h1 className="text-3xl font-bold mb-2">Welcome to BetaBLU</h1>
+          <h1 className="text-3xl font-bold mb-2">Welcome to Betablu</h1>
           <p className="text-gray-400">Sign in to access your AI agents</p>
         </div>
 
@@ -1246,7 +1246,7 @@ export const Footer = () => {
     {
       title: "Company",
       links: [
-        { name: "About BetaBLU", path: "/company" },
+        { name: "About Betablu", path: "/company" },
         { name: "News", path: "/" },
         { name: "Careers", path: "/company" },
         { name: "Mission", path: "/company" }
@@ -1272,7 +1272,7 @@ export const Footer = () => {
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <div className="w-4 h-4 bg-gray-900 rounded-full group-hover:animate-pulse"></div>
               </div>
-              <span className="ml-3 text-xl font-bold group-hover:text-gray-300 transition-colors duration-300">BetaBLU</span>
+              <span className="ml-3 text-xl font-bold group-hover:text-gray-300 transition-colors duration-300">Betablu</span>
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Building the world's most advanced adaptive intelligence systems — AI that thinks, acts, learns, and evolves.
@@ -1311,7 +1311,7 @@ export const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center animate-fadeInUp" style={{ animationDelay: '0.8s' }}>
           <p className="text-gray-400 text-sm">
-            © 2025 BetaBLU. All rights reserved. Building adaptive intelligence for humanity.
+            © 2025 Betablu. All rights reserved. Building adaptive intelligence for humanity.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             {["Privacy Policy", "Terms of Service", "AI Ethics"].map((link, index) => (
