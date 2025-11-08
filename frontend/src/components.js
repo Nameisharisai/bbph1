@@ -149,7 +149,7 @@ const Hero = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
-          <div className={`mb-12 lg:mb-0 transform transition-all duration-1000 ${
+          <div className={`mb-12 lg:mb-0 transform transition-all duration-1000 text-center lg:text-left ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
             <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-800 text-gray-300 mb-6 hover:bg-gray-700 transition-colors duration-300">
@@ -161,13 +161,13 @@ const Hero = () => {
               <span className="inline-block animate-fadeInUp" style={{ animationDelay: '0.2s' }}>Intelligence</span>
               <span className="block text-gray-400 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>that Evolves</span>
             </h1>
-            <p className={`text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed transform transition-all duration-1000 delay-300 ${
+            <p className={`text-xl text-gray-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed transform transition-all duration-1000 delay-300 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
               BetaBLU builds autonomous AI agents that think, act, learn, and improve over time. 
               Unlike static models, our adaptive systems are persistent, self-improving, and truly intelligent.
             </p>
-            <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 delay-500 ${
+            <div className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start transform transition-all duration-1000 delay-500 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
               <Link to="/cosmos" className="bg-white text-black px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-200 transition-all duration-300 inline-flex items-center justify-center group hover:scale-105 transform">
