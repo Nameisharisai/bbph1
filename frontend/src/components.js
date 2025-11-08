@@ -23,10 +23,10 @@ export const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0a0a0a] border-b border-gray-900">
-      <div className="relative w-full">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-[76px]">
+    <header className="sticky top-0 z-50 bg-black border-b border-gray-900 w-full">
+      <div className="relative w-full bg-black">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 bg-black">
+          <div className="flex justify-between items-center h-[76px] bg-black">
             {/* Logo with hover animation */}
             <Link to="/" className="flex items-center group">
               <div className="flex-shrink-0">
@@ -41,12 +41,12 @@ export const Header = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-3 lg:gap-4">
+            <nav className="hidden md:flex items-center gap-3 lg:gap-4 bg-black">
               {navItems.map((item, index) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300"
+                  className="px-4 py-2 text-sm font-medium text-white hover:text-gray-300 transition-colors duration-300"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   {item.name}
@@ -56,7 +56,7 @@ export const Header = () => {
 
             {/* CTA Buttons */}
             <div className="hidden md:flex items-center gap-3">
-              <Link to="/login" className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300">
+              <Link to="/login" className="px-4 py-2 text-sm font-medium text-white hover:text-gray-300 transition-colors duration-300">
                 Log in
               </Link>
               <Link
@@ -94,12 +94,12 @@ export const Header = () => {
           }`}
         >
           <div className="px-4 pb-6 pt-2 space-y-2">
-            <div className="rounded-lg border border-gray-800 bg-black/50 p-4">
+            <div className="rounded-lg border border-gray-800 bg-black p-4">
               {navItems.map((item, index) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="block w-full px-4 py-3 text-base font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition-colors duration-300"
+                  className="block w-full px-4 py-3 text-base font-medium text-white hover:text-gray-300 rounded-lg hover:bg-white/5 transition-colors duration-300"
                   style={{ animationDelay: `${index * 0.04}s` }}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -109,7 +109,7 @@ export const Header = () => {
               <div className="mt-4 space-y-3">
                 <Link
                   to="/login"
-                  className="block w-full px-4 py-3 text-base font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition-colors duration-300"
+                  className="block w-full px-4 py-3 text-base font-medium text-white hover:text-gray-300 rounded-lg hover:bg-white/5 transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Log in
