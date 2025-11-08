@@ -19,6 +19,65 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
         <title>Betablu</title>
+
+        <!-- Glass navbar styles -->
+        <style>
+          /* Targets common header/navbar element names used in the project */
+          header,
+          nav,
+          .navbar,
+          .app-header,
+          .topbar,
+          .top-nav {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            height: 76px;                    /* thicker navbar */
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            margin: 0;
+            background: rgba(255,255,255,0.06); /* translucent base (adjust alpha) */
+            color: #ffffff;
+            backdrop-filter: blur(10px) saturate(120%);
+            -webkit-backdrop-filter: blur(10px) saturate(120%);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            /* rounded lower corners for subtle modern look (optional) */
+            border-radius: 0 0 12px 12px;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+          }
+
+          /* Link / text styling inside navbar */
+          header a,
+          nav a,
+          .navbar a,
+          .app-header a,
+          .topbar a,
+          .top-nav a {
+            color: inherit;
+            text-decoration: none;
+          }
+
+          /* Make sure content under navbar doesn't hide under it */
+          body > :not(script):not(noscript) {
+            /* if your app root is #root this isn't necessary; keep safe fallback */
+          }
+
+          /* Responsive: slightly smaller on phones */
+          @media (max-width: 600px) {
+            header,
+            nav,
+            .navbar,
+            .app-header,
+            .topbar,
+            .top-nav {
+              height: 64px;
+              padding: 0 16px;
+            }
+          }
+        </style>
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>

@@ -4,105 +4,124 @@ import { Link, useNavigate } from 'react-router-dom';
 // Header Component with animations
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
+    const handleScroll = () => setScrolled(window.scrollY > 16);
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navItems = [
+    { name: 'Cosmos', path: '/cosmos' },
+    { name: 'Nova', path: '/nova' },
+    { name: 'API Platform', path: '/api' },
+    { name: 'Research', path: '/research' },
+    { name: 'Safety', path: '/safety' },
+    { name: 'Company', path: '/company' }
+  ];
+
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${
-      scrollY > 50 ? 'bg-black/95 backdrop-blur-sm border-b border-gray-800' : 'bg-black/80'
-    }`}>
-      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo with hover animation */}
-          <Link to="/" className="flex items-center group">
-            <div className="flex-shrink-0">
-              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                <div className="w-4 h-4 bg-black rounded-full transition-all duration-300 group-hover:animate-pulse"></div>
+    <header className="sticky top-0 z-50 bg-black border-b border-gray-900">
+      <div className="relative w-full">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-[76px]">
+            {/* Logo with hover animation */}
+            <Link to="/" className="flex items-center group">
+              <div className="flex-shrink-0">
+                <div className="w-11 h-11 rounded-2xl flex items-center justify-center bg-white/90 text-black shadow-lg shadow-black/10 ring-1 ring-white/40 group-hover:scale-105 transition-transform duration-300">
+                  <div className="w-5 h-5 bg-black/90 rounded-lg group-hover:rotate-6 transition-transform duration-300"></div>
+                </div>
               </div>
-            </div>
-            <span className="ml-3 text-xl font-bold text-white group-hover:text-gray-300 transition-colors duration-300">BetaBLU</span>
-          </Link>
+              <div className="ml-3">
+                <span className="text-xl font-semibold text-white tracking-wide block">Betablu</span>
+                <span className="text-xs uppercase tracking-[0.3em] text-white/60 block">Adaptive AI</span>
+              </div>
+            </Link>
 
-          {/* Desktop Navigation with hover effects */}
-          <nav className="hidden md:flex space-x-8">
-            {[
-              { name: 'Cosmos', path: '/cosmos' },
-              { name: 'Nova', path: '/nova' },
-              { name: 'API Platform', path: '/api' },
-              { name: 'Research', path: '/research' },
-              { name: 'Safety', path: '/safety' },
-              { name: 'Company', path: '/company' }
-            ].map((item, index) => (
-              <Link 
-                key={item.name}
-                to={item.path} 
-                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-all duration-300 relative group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {item.name}
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center gap-3 lg:gap-4">
+              {navItems.map((item, index) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300"
+                  style={{ animationDelay: `${index * 0.05}s` }}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+
+            {/* CTA Buttons */}
+            <div className="hidden md:flex items-center gap-3">
+              <Link to="/login" className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300">
+                Log in
               </Link>
-            ))}
-          </nav>
+              <Link
+                to="/cosmos"
+                className="px-4 py-2 text-sm font-semibold text-white bg-white/10 hover:bg-white/15 border border-white/20 rounded-lg transition-all duration-300"
+              >
+                Try Cosmos
+              </Link>
+            </div>
 
-          {/* CTA Button with enhanced animation */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link to="/login" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">
-              Log in
-            </Link>
-            <Link to="/cosmos" className="bg-white text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition-all duration-300 hover:scale-105 hover:shadow-lg transform">
-              Try Cosmos
-            </Link>
-          </div>
-
-          {/* Mobile menu button with animation */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none transition-all duration-300 hover:scale-110"
-            >
-              <svg className={`h-6 w-6 transform transition-transform duration-300 ${isMenuOpen ? 'rotate-90' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="inline-flex items-center justify-center w-11 h-11 rounded-2xl border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/16 hover:border-white/40"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  className={`h-6 w-6 transition-transform duration-300 ${isMenuOpen ? 'rotate-90' : ''}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Mobile Navigation with slide animation */}
-        <div className={`md:hidden transition-all duration-300 overflow-hidden ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black border-t border-gray-800">
-            {[
-              { name: 'Cosmos', path: '/cosmos' },
-              { name: 'Nova', path: '/nova' },
-              { name: 'API Platform', path: '/api' },
-              { name: 'Research', path: '/research' },
-              { name: 'Safety', path: '/safety' },
-              { name: 'Company', path: '/company' }
-            ].map((item, index) => (
-              <Link 
-                key={item.name}
-                to={item.path} 
-                className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium transition-all duration-300 hover:bg-gray-800 rounded-lg transform hover:translate-x-2"
-                style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <div className="pt-4 pb-2">
-              <Link to="/login" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium transition-all duration-300 hover:bg-gray-800 rounded-lg">
-                Log in
-              </Link>
-              <Link to="/cosmos" className="bg-white text-black px-4 py-2 rounded-full text-base font-medium hover:bg-gray-200 transition-all duration-300 inline-block mt-2 ml-3 hover:scale-105 transform">
-                Try Cosmos
-              </Link>
+        {/* Mobile Navigation */}
+        <div
+          className={`md:hidden transition-all duration-500 overflow-hidden ${
+            isMenuOpen ? 'max-h-[420px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="px-4 pb-6 pt-2 space-y-2">
+            <div className="rounded-lg border border-gray-800 bg-black/50 p-4">
+              {navItems.map((item, index) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="block w-full px-4 py-3 text-base font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition-colors duration-300"
+                  style={{ animationDelay: `${index * 0.04}s` }}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <div className="mt-4 space-y-3">
+                <Link
+                  to="/login"
+                  className="block w-full px-4 py-3 text-base font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition-colors duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Log in
+                </Link>
+                <Link
+                  to="/cosmos"
+                  className="block w-full px-4 py-3 text-base font-semibold text-white rounded-lg bg-white/10 hover:bg-white/15 border border-white/20 transition-all duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Try Cosmos
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -145,7 +164,7 @@ const Hero = () => {
             <p className={`text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed transform transition-all duration-1000 delay-300 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
-              Betablu builds autonomous AI agents that think, act, learn, and improve over time. 
+              BetaBLU builds autonomous AI agents that think, act, learn, and improve over time. 
               Unlike static models, our adaptive systems are persistent, self-improving, and truly intelligent.
             </p>
             <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 delay-500 ${
@@ -296,7 +315,7 @@ const Products = () => {
 const LatestNews = () => {
   const newsItems = [
     {
-      title: "Betablu introduces Adaptive AI Framework",
+      title: "BetaBLU introduces Adaptive AI Framework",
       description: "Our breakthrough framework enables AI agents to continuously learn and adapt to new environments without retraining.",
       image: "https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg",
       date: "June 2025",
@@ -682,7 +701,7 @@ curl -X POST https://api.betablu.ai/nova/analyze
         <div className="text-center mb-20">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 animate-fadeInUp">
             <span className="inline-block">API Platform</span>
-            <span className="block text-gray-400">Build with Betablu</span>
+            <span className="block text-gray-400">Build with BetaBLU</span>
           </h1>
           <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
             Integrate our adaptive AI agents into your applications. Our API platform provides 
@@ -1061,11 +1080,11 @@ export const CompanyPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-20">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 animate-fadeInUp">
-            <span className="inline-block">About Betablu</span>
+            <span className="inline-block">About BetaBLU</span>
             <span className="block text-gray-400">Our Mission</span>
           </h1>
           <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
-            Betablu is a next-generation AI research company building the world's most advanced 
+            BetaBLU is a next-generation AI research company building the world's most advanced 
             adaptive intelligence systems — autonomous AI agents that can think, act, learn, and improve over time.
           </p>
         </div>
@@ -1089,7 +1108,7 @@ export const CompanyPage = () => {
             <div className="relative group">
               <img 
                 src="https://images.unsplash.com/photo-1522252234503-e356532cafd5" 
-                alt="Betablu Team" 
+                alt="BetaBLU Team" 
                 className="w-full rounded-2xl transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
@@ -1166,7 +1185,7 @@ export const LoginPage = () => {
           <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform duration-300">
             <div className="w-8 h-8 bg-black rounded-full animate-pulse"></div>
           </div>
-          <h1 className="text-3xl font-bold mb-2">Welcome to Betablu</h1>
+          <h1 className="text-3xl font-bold mb-2">Welcome to BetaBLU</h1>
           <p className="text-gray-400">Sign in to access your AI agents</p>
         </div>
 
@@ -1246,7 +1265,7 @@ export const Footer = () => {
     {
       title: "Company",
       links: [
-        { name: "About Betablu", path: "/company" },
+        { name: "About BetaBLU", path: "/company" },
         { name: "News", path: "/" },
         { name: "Careers", path: "/company" },
         { name: "Mission", path: "/company" }
@@ -1272,7 +1291,7 @@ export const Footer = () => {
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <div className="w-4 h-4 bg-gray-900 rounded-full group-hover:animate-pulse"></div>
               </div>
-              <span className="ml-3 text-xl font-bold group-hover:text-gray-300 transition-colors duration-300">Betablu</span>
+              <span className="ml-3 text-xl font-bold group-hover:text-gray-300 transition-colors duration-300">BetaBLU</span>
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Building the world's most advanced adaptive intelligence systems — AI that thinks, acts, learns, and evolves.
@@ -1311,7 +1330,7 @@ export const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center animate-fadeInUp" style={{ animationDelay: '0.8s' }}>
           <p className="text-gray-400 text-sm">
-            © 2025 Betablu. All rights reserved. Building adaptive intelligence for humanity.
+            © 2025 BetaBLU. All rights reserved. Building adaptive intelligence for humanity.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             {["Privacy Policy", "Terms of Service", "AI Ethics"].map((link, index) => (

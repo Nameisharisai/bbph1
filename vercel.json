@@ -3,6 +3,7 @@
   "outputDirectory": "frontend/build",
   "buildCommand": "cd frontend && npm install && npm run build",
   "framework": "create-react-app",
+  "public": true,
   "routes": [
     {
       "src": "/static/(.*)",

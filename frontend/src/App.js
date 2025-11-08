@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './ScrollToTop';
 import { 
   Header, 
   Home, 
@@ -18,9 +19,10 @@ function App() {
   return (
     <div className="App fixed inset-0 bg-black w-screen h-screen overflow-x-hidden">
       <BrowserRouter>
+        <ScrollToTop />
         <div className="flex flex-col min-h-screen max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
           <Header />
-          <main className="flex-grow w-full">
+          <main className="flex-grow w-full pt-28 md:pt-28 lg:pt-28">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/cosmos" element={<CosmosPage />} />

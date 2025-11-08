@@ -98,22 +98,31 @@ code {
   transform: scale(1.05);
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - thinner */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: transparent; /* keep track invisible to save space */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
+  background: rgba(255,255,255,0.06); /* very subtle */
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.02);
+  transition: background-color 120ms ease, opacity 120ms ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgba(255,255,255,0.16);
+}
+
+/* Make root and app containers use thinner scrollbars too */
+#root, .App, html, body {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(255,255,255,0.06) transparent;
 }
 
 /* Focus styles for accessibility */
@@ -134,4 +143,37 @@ img[data-loaded="false"] {
 
 img[data-loaded="true"] {
   opacity: 1;
+}
+
+/* Thinner mobile scrollbars (more compact + near-transparent) */
+@media (max-width: 768px) {
+  /* WebKit-based browsers (Chrome on Android). iOS uses overlay scrollbars that aren't styleable */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.06); /* almost transparent */
+    border-radius: 999px;
+    min-height: 20px;
+    border: 1px solid rgba(255,255,255,0.02);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.14);
+  }
+
+  /* Firefox */
+  html, body, #root {
+    scrollbar-width: thin; /* narrow */
+    scrollbar-color: rgba(255,255,255,0.06) transparent;
+  }
+
+  /* If you want the scrollbar to be effectively invisible until interaction, you can use opacity on the thumb
+     but avoid completely hiding it for accessibility. */
 }
