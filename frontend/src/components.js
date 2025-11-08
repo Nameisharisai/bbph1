@@ -139,7 +139,15 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative bg-[#0a0a0a] py-6 overflow-hidden">
+    <section className="relative bg-[#0a0a0a] min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Blue light animation background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-2 h-2 bg-white rounded-full animate-pulse"></div>
@@ -147,7 +155,7 @@ const Hero = () => {
         <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-gray-300 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
         <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
           <div className={`mb-12 lg:mb-0 transform transition-all duration-1000 text-center lg:text-left ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
@@ -233,17 +241,25 @@ const Products = () => {
   ];
 
   return (
-    <section className="py-6 bg-white relative overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-[#0a0a0a] overflow-hidden py-12">
+      {/* Blue light animation background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      
       {/* Background animation elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gray-300 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gray-200 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gray-700 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gray-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="mb-16 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-4 animate-fadeInUp">Our Products</h2>
-          <p className="text-xl text-gray-600 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>Autonomous AI agents that evolve with every interaction</p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
+        <div className="mb-12 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 animate-fadeInUp">Our Products</h2>
+          <p className="text-xl text-gray-400 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>Autonomous AI agents that evolve with every interaction</p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -255,8 +271,8 @@ const Products = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className={`bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 ${
-                hoveredIndex === index ? 'shadow-2xl shadow-gray-400/50' : 'shadow-lg'
+              <div className={`bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 ${
+                hoveredIndex === index ? 'shadow-2xl shadow-gray-700/50' : 'shadow-lg'
               }`}>
                 <div className="relative overflow-hidden">
                   <img 
@@ -289,13 +305,13 @@ const Products = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-black mb-3 group-hover:text-gray-700 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gray-300 transition-colors duration-300">
                     {product.name}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                  <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                     {product.description}
                   </p>
-                  <div className="mt-4 flex items-center text-gray-500 group-hover:text-black transition-colors duration-300">
+                  <div className="mt-4 flex items-center text-gray-500 group-hover:text-white transition-colors duration-300">
                     <span className="text-sm">Learn more</span>
                     <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -341,9 +357,16 @@ const LatestNews = () => {
   ];
 
   return (
-    <section className="py-6 bg-[#0a0a0a] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16">
+    <section className="relative min-h-screen flex items-center justify-center bg-[#0a0a0a] overflow-hidden py-12">
+      {/* Blue light animation background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-1/3 w-72 h-72 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/3 w-96 h-96 bg-cyan-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="mb-12">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 animate-fadeInUp">Latest developments</h2>
           <p className="text-xl text-gray-400 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>Breakthrough advances in adaptive intelligence and autonomous AI systems</p>
         </div>
@@ -432,8 +455,16 @@ export const CosmosPage = () => {
   };
 
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div className="bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
+      {/* Blue light animation background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
         <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center mb-8">
           <div className="animate-fadeInUp">
             <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-900 text-green-300 mb-6 hover:bg-green-800 transition-colors duration-300">
@@ -500,7 +531,7 @@ export const CosmosPage = () => {
               description: "Lightning-fast responses with deep understanding"
             }
           ].map((feature, index) => (
-            <div key={index} className="text-center p-6 group hover:bg-gray-100 rounded-2xl transition-all duration-300 transform hover:scale-105">
+            <div key={index} className="text-center p-6 group hover:bg-gray-800 rounded-2xl transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-gray-700 transition-colors duration-300 group-hover:animate-pulse">
                 {feature.icon}
               </div>
@@ -573,8 +604,16 @@ export const NovaPage = () => {
   };
 
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div className="bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
+      {/* Blue light animation background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-800 text-gray-400 mb-6 animate-fadeInUp hover:bg-gray-700 transition-colors duration-300">
             <div className="w-2 h-2 bg-gray-500 rounded-full mr-2 animate-pulse"></div>
@@ -696,8 +735,16 @@ curl -X POST https://api.betablu.ai/nova/analyze
   ];
 
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div className="bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
+      {/* Blue light animation background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="text-center mb-8">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 animate-fadeInUp">
             <span className="inline-block">API Platform</span>
@@ -844,8 +891,16 @@ export const ResearchPage = () => {
   ];
 
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div className="bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
+      {/* Blue light animation background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="text-center mb-8">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 animate-fadeInUp">
             <span className="inline-block">Research</span>
@@ -956,8 +1011,16 @@ export const ResearchPage = () => {
 // Enhanced Safety Page Component
 export const SafetyPage = () => {
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div className="bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
+      {/* Blue light animation background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="text-center mb-8">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 animate-fadeInUp">
             <span className="inline-block">AI Safety</span>
@@ -1076,8 +1139,16 @@ export const SafetyPage = () => {
 // Enhanced Company Page Component
 export const CompanyPage = () => {
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div className="bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
+      {/* Blue light animation background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="text-center mb-8">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 animate-fadeInUp">
             <span className="inline-block">About BetaBLU</span>
@@ -1174,6 +1245,14 @@ export const LoginPage = () => {
 
   return (
     <div className="bg-[#0a0a0a] text-white min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Blue light animation background */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      
       {/* Background Animation */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-white rounded-full blur-3xl animate-pulse"></div>
@@ -1283,17 +1362,28 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="relative bg-black text-white overflow-hidden">
+      {/* Animated Blue Light Background Effects */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+
+      {/* Animated gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-cyan-900/20 animate-gradient"></div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-1 animate-fadeInUp">
             <Link to="/" className="flex items-center mb-6 group">
-              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <div className="w-4 h-4 bg-gray-900 rounded-full group-hover:animate-pulse"></div>
+              <div className="relative w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/50">
+                <div className="w-4 h-4 bg-black rounded-full group-hover:animate-pulse"></div>
+                <div className="absolute inset-0 bg-blue-500 rounded-full blur-md opacity-50 animate-pulse"></div>
               </div>
-              <span className="ml-3 text-xl font-bold group-hover:text-gray-300 transition-colors duration-300">BetaBLU</span>
+              <span className="ml-3 text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent group-hover:from-blue-300 group-hover:to-cyan-300 transition-all duration-300">BetaBLU</span>
             </Link>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-6 leading-relaxed">
               Building the world's most advanced adaptive intelligence systems — AI that thinks, acts, learns, and evolves.
             </p>
             <div className="flex space-x-4">
@@ -1305,8 +1395,9 @@ export const Footer = () => {
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
               ].map((icon, index) => (
-                <a key={index} href="#" className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 transform">
+                <a key={index} href="#" className="relative text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-110 transform group">
                   {icon}
+                  <div className="absolute inset-0 bg-blue-500 rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
                 </a>
               ))}
             </div>
@@ -1314,12 +1405,13 @@ export const Footer = () => {
           
           {footerSections.map((section, index) => (
             <div key={index} className="animate-fadeInUp" style={{ animationDelay: `${(index + 1) * 0.1}s` }}>
-              <h3 className="font-semibold mb-4">{section.title}</h3>
+              <h3 className="font-semibold mb-4 text-blue-400">{section.title}</h3>
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <Link to={link.path} className="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 transform inline-block">
-                      {link.name}
+                    <Link to={link.path} className="relative text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 transform inline-block group">
+                      <span className="relative z-10">{link.name}</span>
+                      <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
                     </Link>
                   </li>
                 ))}
@@ -1328,14 +1420,15 @@ export const Footer = () => {
           ))}
         </div>
         
-        <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center animate-fadeInUp" style={{ animationDelay: '0.8s' }}>
-          <p className="text-gray-400 text-sm">
-            © 2025 BetaBLU. All rights reserved. Building adaptive intelligence for humanity.
+        <div className="relative mt-12 pt-8 border-t border-blue-900/30 flex flex-col md:flex-row justify-between items-center animate-fadeInUp" style={{ animationDelay: '0.8s' }}>
+          <p className="text-gray-300 text-sm">
+            © 2025 <span className="text-blue-400 font-semibold">BetaBLU</span>. All rights reserved. Building adaptive intelligence for humanity.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             {["Privacy Policy", "Terms of Service", "AI Ethics"].map((link, index) => (
-              <a key={index} href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300 hover:scale-105 transform">
+              <a key={index} href="#" className="text-gray-300 hover:text-blue-400 text-sm transition-all duration-300 hover:scale-105 transform relative group">
                 {link}
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
           </div>

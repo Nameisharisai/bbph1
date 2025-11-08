@@ -22,7 +22,7 @@ function App() {
         <ScrollToTop />
         <div className="flex flex-col min-h-screen">
           <Header />
-          <main className="flex-grow w-full pt-4">
+          <main className="flex-grow w-full">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/cosmos" element={<CosmosPage />} />
