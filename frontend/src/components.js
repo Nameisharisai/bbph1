@@ -142,11 +142,11 @@ const Hero = () => {
     <section className="relative bg-[#0a0a0a] min-h-screen flex items-center justify-center overflow-hidden">
       {/* Blue light animation background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-gray-700 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-gray-800 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gray-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-black/50 to-gray-900/10 animate-gradient"></div>
       
       {/* Animated background elements */}
       <div className="absolute inset-0">
@@ -244,11 +244,11 @@ const Products = () => {
     <section className="relative min-h-screen flex items-center justify-center bg-[#0a0a0a] overflow-hidden py-12">
       {/* Blue light animation background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-gray-700 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gray-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gray-800 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-black/50 to-gray-900/10 animate-gradient"></div>
       
       {/* Background animation elements */}
       <div className="absolute inset-0 opacity-10">
@@ -360,10 +360,10 @@ const LatestNews = () => {
     <section className="relative min-h-screen flex items-center justify-center bg-[#0a0a0a] overflow-hidden py-12">
       {/* Blue light animation background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-1/3 w-72 h-72 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/3 w-96 h-96 bg-cyan-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-20 left-1/3 w-72 h-72 bg-gray-700 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/3 w-96 h-96 bg-gray-700 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-black/50 to-gray-900/10 animate-gradient"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="mb-12">
@@ -458,11 +458,11 @@ export const CosmosPage = () => {
     <div className="bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
       {/* Blue light animation background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-gray-700 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-gray-800 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gray-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-black/50 to-gray-900/10 animate-gradient"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
         <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center mb-8">
@@ -607,11 +607,11 @@ export const NovaPage = () => {
     <div className="bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
       {/* Blue light animation background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-gray-700 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-gray-800 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gray-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-black/50 to-gray-900/10 animate-gradient"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="text-center mb-8">
@@ -738,11 +738,11 @@ curl -X POST https://api.betablu.ai/nova/analyze
     <div className="bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
       {/* Blue light animation background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-gray-700 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-gray-800 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gray-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-black/50 to-gray-900/10 animate-gradient"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="text-center mb-8">
@@ -894,11 +894,11 @@ export const ResearchPage = () => {
     <div className="bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
       {/* Blue light animation background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-gray-700 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-gray-800 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gray-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-black/50 to-gray-900/10 animate-gradient"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="text-center mb-8">
@@ -1014,11 +1014,11 @@ export const SafetyPage = () => {
     <div className="bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
       {/* Blue light animation background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-gray-700 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-gray-800 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gray-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-black/50 to-gray-900/10 animate-gradient"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="text-center mb-8">
@@ -1043,7 +1043,7 @@ export const SafetyPage = () => {
                   description: "Our AI systems are designed to understand and align with human values and intentions."
                 },
                 {
-                  color: "bg-blue-500", 
+                  color: "bg-gray-700", 
                   title: "Transparency",
                   description: "We believe in making our AI systems interpretable and their decision-making processes clear."
                 },
@@ -1142,11 +1142,11 @@ export const CompanyPage = () => {
     <div className="bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
       {/* Blue light animation background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-gray-700 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-gray-800 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gray-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-black/50 to-gray-900/10 animate-gradient"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="text-center mb-8">
@@ -1247,11 +1247,11 @@ export const LoginPage = () => {
     <div className="bg-[#0a0a0a] text-white min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Blue light animation background */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-gray-700 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-gray-800 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gray-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/50 to-cyan-900/10 animate-gradient"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-black/50 to-gray-900/10 animate-gradient"></div>
       
       {/* Background Animation */}
       <div className="absolute inset-0 opacity-10">
@@ -1365,13 +1365,13 @@ export const Footer = () => {
     <footer className="relative bg-black text-white overflow-hidden">
       {/* Animated Blue Light Background Effects */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-blue-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-700 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gray-600 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-gray-800 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       {/* Animated gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-cyan-900/20 animate-gradient"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 via-black to-gray-900/20 animate-gradient"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -1379,7 +1379,7 @@ export const Footer = () => {
             <Link to="/" className="flex items-center mb-6 group">
               <div className="relative w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/50">
                 <div className="w-4 h-4 bg-black rounded-full group-hover:animate-pulse"></div>
-                <div className="absolute inset-0 bg-blue-500 rounded-full blur-md opacity-50 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gray-700 rounded-full blur-md opacity-50 animate-pulse"></div>
               </div>
               <span className="ml-3 text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent group-hover:from-blue-300 group-hover:to-cyan-300 transition-all duration-300">BetaBLU</span>
             </Link>
@@ -1397,7 +1397,7 @@ export const Footer = () => {
               ].map((icon, index) => (
                 <a key={index} href="#" className="relative text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-110 transform group">
                   {icon}
-                  <div className="absolute inset-0 bg-blue-500 rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gray-700 rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
                 </a>
               ))}
             </div>
@@ -1428,7 +1428,7 @@ export const Footer = () => {
             {["Privacy Policy", "Terms of Service", "AI Ethics"].map((link, index) => (
               <a key={index} href="#" className="text-gray-300 hover:text-blue-400 text-sm transition-all duration-300 hover:scale-105 transform relative group">
                 {link}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gray-700 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
           </div>
