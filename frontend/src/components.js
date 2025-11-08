@@ -233,17 +233,17 @@ const Products = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-900 relative overflow-hidden">
+    <section className="py-20 bg-white relative overflow-hidden">
       {/* Background animation elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-white rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gray-300 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gray-300 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gray-200 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="mb-16 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 animate-fadeInUp">Our Products</h2>
-          <p className="text-xl text-gray-400 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>Autonomous AI agents that evolve with every interaction</p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-4 animate-fadeInUp">Our Products</h2>
+          <p className="text-xl text-gray-600 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>Autonomous AI agents that evolve with every interaction</p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -255,8 +255,8 @@ const Products = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className={`bg-black rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 ${
-                hoveredIndex === index ? 'shadow-2xl shadow-white/20' : 'shadow-lg'
+              <div className={`bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 ${
+                hoveredIndex === index ? 'shadow-2xl shadow-gray-400/50' : 'shadow-lg'
               }`}>
                 <div className="relative overflow-hidden">
                   <img 
@@ -289,13 +289,13 @@ const Products = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gray-300 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-black mb-3 group-hover:text-gray-700 transition-colors duration-300">
                     {product.name}
                   </h3>
-                  <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                     {product.description}
                   </p>
-                  <div className="mt-4 flex items-center text-gray-500 group-hover:text-white transition-colors duration-300">
+                  <div className="mt-4 flex items-center text-gray-500 group-hover:text-black transition-colors duration-300">
                     <span className="text-sm">Learn more</span>
                     <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -500,7 +500,7 @@ export const CosmosPage = () => {
               description: "Lightning-fast responses with deep understanding"
             }
           ].map((feature, index) => (
-            <div key={index} className="text-center p-6 group hover:bg-gray-900 rounded-2xl transition-all duration-300 transform hover:scale-105">
+            <div key={index} className="text-center p-6 group hover:bg-gray-100 rounded-2xl transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-gray-700 transition-colors duration-300 group-hover:animate-pulse">
                 {feature.icon}
               </div>
@@ -511,16 +511,16 @@ export const CosmosPage = () => {
         </div>
 
         {/* Enhanced Chat Demo */}
-        <div className="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition-colors duration-300">
-          <h3 className="text-2xl font-bold mb-6">Try Cosmos Now</h3>
-          <div className="bg-black rounded-xl p-6 mb-4 max-h-96 overflow-y-auto">
+        <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:bg-gray-50 transition-colors duration-300">
+          <h3 className="text-2xl font-bold mb-6 text-black">Try Cosmos Now</h3>
+          <div className="bg-gray-100 rounded-xl p-6 mb-4 max-h-96 overflow-y-auto">
             <div className="space-y-4">
               {messages.map((message, index) => (
                 <div key={index} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'} animate-fadeInUp`}>
                   <div className={`px-4 py-2 rounded-2xl max-w-xs transition-all duration-300 hover:scale-105 ${
                     message.type === 'user' 
-                      ? 'bg-white text-black' 
-                      : 'bg-gray-800 text-white'
+                      ? 'bg-black text-white' 
+                      : 'bg-white border border-gray-200 text-black'
                   }`}>
                     {message.text}
                   </div>
@@ -528,11 +528,11 @@ export const CosmosPage = () => {
               ))}
               {isTyping && (
                 <div className="flex justify-start animate-fadeInUp">
-                  <div className="bg-gray-800 text-white px-4 py-2 rounded-2xl max-w-xs">
+                  <div className="bg-white border border-gray-200 text-black px-4 py-2 rounded-2xl max-w-xs">
                     <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      <div className="w-2 h-2 bg-gray-600 rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-gray-600 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                      <div className="w-2 h-2 bg-gray-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                     </div>
                   </div>
                 </div>
@@ -546,11 +546,11 @@ export const CosmosPage = () => {
               onChange={(e) => setInputValue(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
               placeholder="Type your message..." 
-              className="flex-1 bg-gray-800 text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-white transition-all duration-300"
+              className="flex-1 bg-gray-200 text-black px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-black transition-all duration-300"
             />
             <button 
               onClick={handleSendMessage}
-              className="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-200 transition-all duration-300 hover:scale-105 transform"
+              className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105 transform"
             >
               Send
             </button>
@@ -615,7 +615,7 @@ export const NovaPage = () => {
                 { title: "Adaptive Visual Learning", desc: "Continuous improvement through visual pattern recognition" },
                 { title: "Multi-modal Integration", desc: "Seamless integration with text and audio understanding" }
               ].map((item, index) => (
-                <div key={index} className="flex items-start space-x-3 group hover:bg-gray-900 p-3 rounded-lg transition-all duration-300">
+                <div key={index} className="flex items-start space-x-3 group hover:bg-white p-3 rounded-lg transition-all duration-300">
                   <div className="w-6 h-6 bg-gray-700 rounded-full flex-shrink-0 mt-1 group-hover:bg-gray-600 transition-colors duration-300"></div>
                   <div>
                     <h3 className="font-semibold group-hover:text-gray-300 transition-colors duration-300">{item.title}</h3>
@@ -627,21 +627,21 @@ export const NovaPage = () => {
           </div>
         </div>
 
-        <div className="text-center bg-gray-900 rounded-2xl p-12 hover:bg-gray-800 transition-colors duration-300">
-          <h3 className="text-2xl font-bold mb-4">Be the First to Experience Nova</h3>
-          <p className="text-gray-400 mb-8">Join our waitlist to get early access when Nova launches.</p>
+        <div className="text-center bg-white border border-gray-200 rounded-2xl p-12 hover:bg-gray-50 transition-colors duration-300">
+          <h3 className="text-2xl font-bold mb-4 text-black">Be the First to Experience Nova</h3>
+          <p className="text-gray-600 mb-8">Join our waitlist to get early access when Nova launches.</p>
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <input 
               type="email" 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email" 
-              className="flex-1 bg-black text-white px-4 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-white transition-all duration-300"
+              className="flex-1 bg-gray-100 text-black px-4 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-black transition-all duration-300"
               required
             />
             <button 
               type="submit"
-              className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-200 transition-all duration-300 hover:scale-105 transform"
+              className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105 transform"
             >
               {isSubmitted ? '✓ Added!' : 'Join Waitlist'}
             </button>
@@ -727,22 +727,22 @@ curl -X POST https://api.betablu.ai/nova/analyze
             ))}
           </div>
 
-          <div className="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition-colors duration-300">
-            <h3 className="text-2xl font-bold mb-4">{apiExamples[activeTab].name}</h3>
-            <p className="text-gray-400 mb-6">{apiExamples[activeTab].description}</p>
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:bg-gray-50 transition-colors duration-300">
+            <h3 className="text-2xl font-bold mb-4 text-black">{apiExamples[activeTab].name}</h3>
+            <p className="text-gray-600 mb-6">{apiExamples[activeTab].description}</p>
             
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h4 className="text-lg font-semibold mb-3">Request</h4>
-                <div className="bg-black rounded-lg p-4">
+                <h4 className="text-lg font-semibold mb-3 text-black">Request</h4>
+                <div className="bg-gray-900 rounded-lg p-4">
                   <pre className="text-green-400 text-sm overflow-x-auto">
                     {apiExamples[activeTab].code}
                   </pre>
                 </div>
               </div>
               <div>
-                <h4 className="text-lg font-semibold mb-3">Response</h4>
-                <div className="bg-black rounded-lg p-4">
+                <h4 className="text-lg font-semibold mb-3 text-black">Response</h4>
+                <div className="bg-gray-900 rounded-lg p-4">
                   <pre className="text-blue-400 text-sm overflow-x-auto">
                     {apiExamples[activeTab].response}
                   </pre>
@@ -783,27 +783,27 @@ curl -X POST https://api.betablu.ai/nova/analyze
                 key={index} 
                 className={`rounded-2xl p-8 transition-all duration-500 hover:scale-105 transform animate-fadeInUp ${
                   plan.popular 
-                    ? 'bg-white text-black scale-105' 
-                    : 'bg-gray-900 hover:bg-gray-800'
+                    ? 'bg-black text-white scale-105' 
+                    : 'bg-white border border-gray-200 hover:bg-gray-50 text-black'
                 }`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>
                 <div className="text-4xl font-bold mb-6">
                   {plan.price}
-                  <span className={`text-xl ${plan.popular ? 'text-gray-600' : 'text-gray-400'}`}>
+                  <span className={`text-xl ${plan.popular ? 'text-gray-400' : 'text-gray-600'}`}>
                     {plan.period}
                   </span>
                 </div>
-                <ul className={`space-y-3 mb-8 ${plan.popular ? 'text-gray-600' : 'text-gray-400'}`}>
+                <ul className={`space-y-3 mb-8 ${plan.popular ? 'text-gray-400' : 'text-gray-600'}`}>
                   {plan.features.map((feature, idx) => (
                     <li key={idx}>• {feature}</li>
                   ))}
                 </ul>
                 <button className={`w-full py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 transform ${
                   plan.popular 
-                    ? 'bg-black text-white hover:bg-gray-800' 
-                    : 'bg-white text-black hover:bg-gray-200'
+                    ? 'bg-white text-black hover:bg-gray-200' 
+                    : 'bg-black text-white hover:bg-gray-800'
                 }`}>
                   {plan.popular ? 'Most Popular' : 'Get Started'}
                 </button>
@@ -881,7 +881,7 @@ export const ResearchPage = () => {
           ].map((paper, index) => (
             <article 
               key={index} 
-              className="bg-gray-900 rounded-2xl overflow-hidden group hover:bg-gray-800 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fadeInUp"
+              className="bg-white border border-gray-200 rounded-2xl overflow-hidden group hover:bg-gray-50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fadeInUp"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="relative overflow-hidden">
@@ -894,9 +894,9 @@ export const ResearchPage = () => {
               </div>
               <div className="p-6">
                 <div className="text-sm text-gray-500 mb-2">{paper.date}</div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-gray-300 transition-colors duration-300">{paper.title}</h3>
-                <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors duration-300">{paper.description}</p>
-                <button className="text-white hover:text-gray-300 font-medium group flex items-center">
+                <h3 className="text-xl font-bold mb-3 text-black group-hover:text-gray-700 transition-colors duration-300">{paper.title}</h3>
+                <p className="text-gray-600 mb-4 group-hover:text-gray-700 transition-colors duration-300">{paper.description}</p>
+                <button className="text-black hover:text-gray-700 font-medium group flex items-center">
                   <span>Read Paper</span>
                   <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -927,11 +927,11 @@ export const ResearchPage = () => {
             ))}
           </div>
 
-          <div className="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition-all duration-300">
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:bg-gray-50 transition-all duration-300">
             <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
               <div>
-                <h3 className="text-3xl font-bold mb-6">{researchAreas[selectedArea].title}</h3>
-                <p className="text-gray-400 leading-relaxed text-lg">
+                <h3 className="text-3xl font-bold mb-6 text-black">{researchAreas[selectedArea].title}</h3>
+                <p className="text-gray-600 leading-relaxed text-lg">
                   {researchAreas[selectedArea].description}
                 </p>
               </div>
@@ -990,7 +990,7 @@ export const SafetyPage = () => {
                   description: "Our systems are designed to be reliable and perform safely across a wide range of scenarios."
                 }
               ].map((principle, index) => (
-                <div key={index} className="flex items-start space-x-4 group hover:bg-gray-900 p-4 rounded-2xl transition-all duration-300">
+                <div key={index} className="flex items-start space-x-4 group hover:bg-white p-4 rounded-2xl transition-all duration-300">
                   <div className={`w-8 h-8 ${principle.color} rounded-full flex-shrink-0 mt-1 flex items-center justify-center group-hover:animate-pulse`}>
                     <div className="w-3 h-3 bg-white rounded-full"></div>
                   </div>
@@ -1015,13 +1015,13 @@ export const SafetyPage = () => {
         </div>
 
         {/* Enhanced Safety Research */}
-        <div className="bg-gray-900 rounded-2xl p-12 mb-20 hover:bg-gray-800 transition-colors duration-300">
-          <h2 className="text-3xl font-bold mb-8 text-center">Safety Research</h2>
+        <div className="bg-white border border-gray-200 rounded-2xl p-12 mb-20 hover:bg-gray-50 transition-colors duration-300">
+          <h2 className="text-3xl font-bold mb-8 text-center text-black">Safety Research</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 icon: (
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 ),
@@ -1030,7 +1030,7 @@ export const SafetyPage = () => {
               },
               {
                 icon: (
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                   </svg>
@@ -1040,7 +1040,7 @@ export const SafetyPage = () => {
               },
               {
                 icon: (
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 ),
@@ -1048,12 +1048,12 @@ export const SafetyPage = () => {
                 description: "Development and sharing of safety best practices across the industry"
               }
             ].map((item, index) => (
-              <div key={index} className="text-center group hover:bg-gray-800 p-6 rounded-2xl transition-all duration-300 transform hover:scale-105">
-                <div className="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-gray-700 transition-colors duration-300 group-hover:animate-pulse">
+              <div key={index} className="text-center group hover:bg-gray-100 p-6 rounded-2xl transition-all duration-300 transform hover:scale-105">
+                <div className="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-gray-300 transition-colors duration-300 group-hover:animate-pulse">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-gray-300 transition-colors duration-300">{item.title}</h3>
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{item.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-black group-hover:text-gray-700 transition-colors duration-300">{item.title}</h3>
+                <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{item.description}</p>
               </div>
             ))}
           </div>
@@ -1116,8 +1116,8 @@ export const CompanyPage = () => {
           </div>
         </div>
 
-        <div className="bg-gray-900 rounded-2xl p-12 mb-20 hover:bg-gray-800 transition-colors duration-300">
-          <h2 className="text-3xl font-bold mb-8 text-center">Our Values</h2>
+        <div className="bg-white border border-gray-200 rounded-2xl p-12 mb-20 hover:bg-gray-50 transition-colors duration-300">
+          <h2 className="text-3xl font-bold mb-8 text-center text-black">Our Values</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -1133,9 +1133,9 @@ export const CompanyPage = () => {
                 description: "Building trust through open research and clear communication about our technology"
               }
             ].map((value, index) => (
-              <div key={index} className="text-center group hover:bg-gray-800 p-6 rounded-2xl transition-all duration-300 transform hover:scale-105">
-                <h3 className="text-xl font-bold mb-4 group-hover:text-gray-300 transition-colors duration-300">{value.title}</h3>
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{value.description}</p>
+              <div key={index} className="text-center group hover:bg-gray-100 p-6 rounded-2xl transition-all duration-300 transform hover:scale-105">
+                <h3 className="text-xl font-bold mb-4 text-black group-hover:text-gray-700 transition-colors duration-300">{value.title}</h3>
+                <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{value.description}</p>
               </div>
             ))}
           </div>
@@ -1189,26 +1189,26 @@ export const LoginPage = () => {
           <p className="text-gray-400">Sign in to access your AI agents</p>
         </div>
 
-        <div className="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition-colors duration-300 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+        <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:bg-gray-50 transition-colors duration-300 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block text-sm font-medium mb-2">Email</label>
+              <label className="block text-sm font-medium mb-2 text-black">Email</label>
               <input 
                 type="email" 
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
-                className="w-full bg-black text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white transition-all duration-300"
+                className="w-full bg-gray-100 text-black px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-all duration-300"
                 placeholder="Enter your email"
                 required
               />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-2">Password</label>
+              <label className="block text-sm font-medium mb-2 text-black">Password</label>
               <input 
                 type="password" 
                 value={formData.password}
                 onChange={(e) => setFormData({...formData, password: e.target.value})}
-                className="w-full bg-black text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white transition-all duration-300"
+                className="w-full bg-gray-100 text-black px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-all duration-300"
                 placeholder="Enter your password"
                 required
               />
@@ -1216,7 +1216,7 @@ export const LoginPage = () => {
             <button 
               type="submit"
               disabled={isLoading}
-              className="w-full bg-white text-black py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 hover:scale-105 transform disabled:opacity-50"
+              className="w-full bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 transform disabled:opacity-50"
             >
               {isLoading ? (
                 <div className="flex items-center justify-center">
