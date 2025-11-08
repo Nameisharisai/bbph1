@@ -23,7 +23,7 @@ export const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-black border-b border-gray-900">
+    <header className="sticky top-0 z-50 bg-[#0a0a0a] border-b border-gray-900">
       <div className="relative w-full">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-[76px]">
@@ -139,7 +139,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative bg-black py-20 overflow-hidden">
+    <section className="relative bg-[#0a0a0a] py-6 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-2 h-2 bg-white rounded-full animate-pulse"></div>
@@ -233,7 +233,7 @@ const Products = () => {
   ];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-6 bg-white relative overflow-hidden">
       {/* Background animation elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gray-300 rounded-full blur-3xl animate-pulse"></div>
@@ -341,7 +341,7 @@ const LatestNews = () => {
   ];
 
   return (
-    <section className="py-20 bg-black relative">
+    <section className="py-6 bg-[#0a0a0a] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 animate-fadeInUp">Latest developments</h2>
@@ -397,7 +397,7 @@ const LatestNews = () => {
 // Home Page Component
 export const Home = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-[#0a0a0a]">
       <Hero />
       <Products />
       <LatestNews />
@@ -432,9 +432,9 @@ export const CosmosPage = () => {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center mb-20">
+    <div className="bg-[#0a0a0a] text-white min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center mb-8">
           <div className="animate-fadeInUp">
             <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-900 text-green-300 mb-6 hover:bg-green-800 transition-colors duration-300">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
@@ -470,7 +470,7 @@ export const CosmosPage = () => {
         </div>
 
         {/* Enhanced Features */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
           {[
             {
               icon: (
@@ -519,7 +519,7 @@ export const CosmosPage = () => {
                 <div key={index} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'} animate-fadeInUp`}>
                   <div className={`px-4 py-2 rounded-2xl max-w-xs transition-all duration-300 hover:scale-105 ${
                     message.type === 'user' 
-                      ? 'bg-black text-white' 
+                      ? 'bg-[#0a0a0a] text-white' 
                       : 'bg-white border border-gray-200 text-black'
                   }`}>
                     {message.text}
@@ -550,7 +550,7 @@ export const CosmosPage = () => {
             />
             <button 
               onClick={handleSendMessage}
-              className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105 transform"
+              className="bg-[#0a0a0a] text-white px-6 py-2 rounded-full hover:bg-gray-900 transition-all duration-300 hover:scale-105 transform"
             >
               Send
             </button>
@@ -573,9 +573,9 @@ export const NovaPage = () => {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-20">
+    <div className="bg-[#0a0a0a] text-white min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="text-center mb-8">
           <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-800 text-gray-400 mb-6 animate-fadeInUp hover:bg-gray-700 transition-colors duration-300">
             <div className="w-2 h-2 bg-gray-500 rounded-full mr-2 animate-pulse"></div>
             Coming Soon
@@ -590,7 +590,7 @@ export const NovaPage = () => {
           </p>
         </div>
 
-        <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center mb-20">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center mb-8">
           <div className="animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
             <div className="relative group">
               <img 
@@ -641,7 +641,7 @@ export const NovaPage = () => {
             />
             <button 
               type="submit"
-              className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105 transform"
+              className="bg-[#0a0a0a] text-white px-6 py-3 rounded-full hover:bg-gray-900 transition-all duration-300 hover:scale-105 transform"
             >
               {isSubmitted ? '✓ Added!' : 'Join Waitlist'}
             </button>
@@ -696,9 +696,9 @@ curl -X POST https://api.betablu.ai/nova/analyze
   ];
 
   return (
-    <div className="bg-black text-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-20">
+    <div className="bg-[#0a0a0a] text-white min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="text-center mb-8">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 animate-fadeInUp">
             <span className="inline-block">API Platform</span>
             <span className="block text-gray-400">Build with BetaBLU</span>
@@ -783,7 +783,7 @@ curl -X POST https://api.betablu.ai/nova/analyze
                 key={index} 
                 className={`rounded-2xl p-8 transition-all duration-500 hover:scale-105 transform animate-fadeInUp ${
                   plan.popular 
-                    ? 'bg-black text-white scale-105' 
+                    ? 'bg-[#0a0a0a] text-white scale-105' 
                     : 'bg-white border border-gray-200 hover:bg-gray-50 text-black'
                 }`}
                 style={{ animationDelay: `${index * 0.2}s` }}
@@ -802,8 +802,8 @@ curl -X POST https://api.betablu.ai/nova/analyze
                 </ul>
                 <button className={`w-full py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 transform ${
                   plan.popular 
-                    ? 'bg-white text-black hover:bg-gray-200' 
-                    : 'bg-black text-white hover:bg-gray-800'
+                    ? 'bg-white text-[#0a0a0a] hover:bg-gray-200' 
+                    : 'bg-[#0a0a0a] text-white hover:bg-gray-900'
                 }`}>
                   {plan.popular ? 'Most Popular' : 'Get Started'}
                 </button>
@@ -844,9 +844,9 @@ export const ResearchPage = () => {
   ];
 
   return (
-    <div className="bg-black text-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-20">
+    <div className="bg-[#0a0a0a] text-white min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="text-center mb-8">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 animate-fadeInUp">
             <span className="inline-block">Research</span>
             <span className="block text-gray-400">Advancing AI</span>
@@ -858,7 +858,7 @@ export const ResearchPage = () => {
         </div>
 
         {/* Research Papers Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {[
             {
               title: "Adaptive Learning in Neural Networks",
@@ -908,8 +908,8 @@ export const ResearchPage = () => {
         </div>
 
         {/* Interactive Research Areas */}
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold mb-12 text-center animate-fadeInUp">Research Areas</h2>
+        <div className="mb-8">
+          <h2 className="text-4xl font-bold mb-8 text-center animate-fadeInUp">Research Areas</h2>
           
           <div className="flex flex-wrap justify-center mb-8">
             {researchAreas.map((area, index) => (
@@ -918,7 +918,7 @@ export const ResearchPage = () => {
                 onClick={() => setSelectedArea(index)}
                 className={`px-6 py-3 mx-2 mb-2 rounded-full font-medium transition-all duration-300 hover:scale-105 transform ${
                   selectedArea === index 
-                    ? 'bg-white text-black' 
+                    ? 'bg-white text-[#0a0a0a]' 
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 }`}
               >
@@ -956,9 +956,9 @@ export const ResearchPage = () => {
 // Enhanced Safety Page Component
 export const SafetyPage = () => {
   return (
-    <div className="bg-black text-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-20">
+    <div className="bg-[#0a0a0a] text-white min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="text-center mb-8">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 animate-fadeInUp">
             <span className="inline-block">AI Safety</span>
             <span className="block text-gray-400">Our Commitment</span>
@@ -969,7 +969,7 @@ export const SafetyPage = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
+        <div className="grid md:grid-cols-2 gap-12 mb-8">
           <div className="animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
             <h2 className="text-3xl font-bold mb-6">Safety Principles</h2>
             <div className="space-y-6">
@@ -1015,8 +1015,8 @@ export const SafetyPage = () => {
         </div>
 
         {/* Enhanced Safety Research */}
-        <div className="bg-white border border-gray-200 rounded-2xl p-12 mb-20 hover:bg-gray-50 transition-colors duration-300">
-          <h2 className="text-3xl font-bold mb-8 text-center text-black">Safety Research</h2>
+        <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-8 hover:bg-gray-50 transition-colors duration-300">
+          <h2 className="text-3xl font-bold mb-6 text-center text-black">Safety Research</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -1076,9 +1076,9 @@ export const SafetyPage = () => {
 // Enhanced Company Page Component
 export const CompanyPage = () => {
   return (
-    <div className="bg-black text-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-20">
+    <div className="bg-[#0a0a0a] text-white min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="text-center mb-8">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 animate-fadeInUp">
             <span className="inline-block">About BetaBLU</span>
             <span className="block text-gray-400">Our Mission</span>
@@ -1089,7 +1089,7 @@ export const CompanyPage = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
+        <div className="grid md:grid-cols-2 gap-12 mb-8">
           <div className="animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
             <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
@@ -1116,8 +1116,8 @@ export const CompanyPage = () => {
           </div>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-2xl p-12 mb-20 hover:bg-gray-50 transition-colors duration-300">
-          <h2 className="text-3xl font-bold mb-8 text-center text-black">Our Values</h2>
+        <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-8 hover:bg-gray-50 transition-colors duration-300">
+          <h2 className="text-3xl font-bold mb-6 text-center text-black">Our Values</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -1141,8 +1141,8 @@ export const CompanyPage = () => {
           </div>
         </div>
 
-        <div className="text-center mb-20">
-          <h2 className="text-3xl font-bold mb-8">Join Our Team</h2>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-6">Join Our Team</h2>
           <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
             We're looking for brilliant minds who share our passion for advancing AI and creating 
             technology that benefits humanity.
@@ -1173,7 +1173,7 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div className="bg-[#0a0a0a] text-white min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-white rounded-full blur-3xl animate-pulse"></div>
@@ -1183,7 +1183,7 @@ export const LoginPage = () => {
       <div className="max-w-md w-full mx-4 relative">
         <div className="text-center mb-8 animate-fadeInUp">
           <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform duration-300">
-            <div className="w-8 h-8 bg-black rounded-full animate-pulse"></div>
+            <div className="w-8 h-8 bg-[#0a0a0a] rounded-full animate-pulse"></div>
           </div>
           <h1 className="text-3xl font-bold mb-2">Welcome to BetaBLU</h1>
           <p className="text-gray-400">Sign in to access your AI agents</p>
@@ -1216,7 +1216,7 @@ export const LoginPage = () => {
             <button 
               type="submit"
               disabled={isLoading}
-              className="w-full bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 transform disabled:opacity-50"
+              className="w-full bg-[#0a0a0a] text-white py-3 rounded-lg font-medium hover:bg-gray-900 transition-all duration-300 hover:scale-105 transform disabled:opacity-50"
             >
               {isLoading ? (
                 <div className="flex items-center justify-center">

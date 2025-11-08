@@ -20,9 +20,9 @@ function App() {
     <div className="App fixed inset-0 bg-black w-screen h-screen overflow-x-hidden">
       <BrowserRouter>
         <ScrollToTop />
-        <div className="flex flex-col min-h-screen max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col min-h-screen">
           <Header />
-          <main className="flex-grow w-full pt-28 md:pt-28 lg:pt-28">
+          <main className="flex-grow w-full pt-4">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/cosmos" element={<CosmosPage />} />
